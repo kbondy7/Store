@@ -1,0 +1,29 @@
+<h1>Listing item_colors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Item</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @item_colors.each do |item_color| %>
+      <tr>
+        <td><%= item_color.color_id %></td>
+        <td><%= item_color.item_id %></td>
+        <td><%= link_to 'Show', item_color %></td>
+        <td><%= link_to 'Edit', edit_item_color_path(item_color) %></td>
+        <td><%= link_to 'Destroy', item_color, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item color', new_item_color_path %>

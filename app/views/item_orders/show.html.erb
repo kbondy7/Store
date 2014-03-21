@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Serial:</strong>
+  <%= @item_order.serial %>
+</p>
+
+<p>
+  <strong>Cart:</strong>
+  <%= @item_order.cart_id %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @item_order.item_id %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @item_order.size %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @item_order.color %>
+</p>
+
+<%= link_to 'Edit', edit_item_order_path(@item_order) %> |
+<%= link_to 'Back', item_orders_path %>
